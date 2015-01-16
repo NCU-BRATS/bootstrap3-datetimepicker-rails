@@ -138,7 +138,9 @@ THE SOFTWARE.
                 }).get(0) ||
                 'body';
 
-            picker.widget = $(getTemplate()).appendTo(picker.options.widgetParent);
+            var widgetWrapper = $('<div class="bs"></div>');
+            picker.widget = $(getTemplate())
+            widgetWrapper.append(picker.widget).appendTo(picker.options.widgetParent);
 
             picker.minViewMode = picker.options.minViewMode || 0;
             if (typeof picker.minViewMode === 'string') {
