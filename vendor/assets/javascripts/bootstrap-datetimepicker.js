@@ -311,6 +311,8 @@
                     horizontal = options.widgetPositioning.horizontal,
                     parent;
 
+                widget = $('<div class="bs">').append(widget)
+
                 if (options.widgetParent) {
                     parent = options.widgetParent.append(widget);
                 } else if (element.is('input')) {
